@@ -2,14 +2,9 @@ class Solution:
     def sumOfSquares(self, nums: List[int]) -> int:
         n = len(nums)
         total = 0
-        li = []
-        li.append(0)  
-
-        for ch in nums:
-            li.append(ch)
-        for i in range(1,len(li)):
+        for i in range(1,n+1):
             if n % i == 0:
-                total = total + li[i]*li[i]
+                total = total + nums[i-1]*nums[i-1]
         return total
 
 
