@@ -6,7 +6,7 @@ class Solution:
         if len(li)>1:
             for i in range(len(li)): 
                 if i+1 != len(li): 
-                    if li[i][-1] == li[(i+1)%len(li)][0]:
+                    if li[i][-1] == li[(i+1)][0]:
                         count += 1
         if li[n-1][-1] == li[0][0]:
             count += 1
