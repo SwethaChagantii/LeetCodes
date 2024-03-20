@@ -1,19 +1,11 @@
 class Solution:
     def smallestEqual(self, nums: List[int]) -> int:
         dic = {key: None for key in nums}
-        li = []
+        res = -1
         for i in range(len(nums)):
-            print(i%10,nums[i])
+            print(i,i%10,nums[i])
             if i % 10 == nums[i]:
-                li.append(nums[i])
-                dic[nums[i]] = i
+                res = i
                 break
-        print(dic)
-        if li:
-            min_ele = min(li)
-            for key,value in dic.items():
-                if key == min_ele:
-                    return value
-        return -1
-
+        return res
         
