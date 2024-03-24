@@ -1,8 +1,7 @@
-from collections import Counter
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
-        braces = {"{":"}","[":"]","(":")"}
+        braces = {"{":"}","(":")","[":"]"}
         for char in s:
             if char in braces:
                 stack.append(char)
